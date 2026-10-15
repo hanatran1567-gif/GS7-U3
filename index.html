@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện Tập Tiếng Anh 7 - Unit 3: Community Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white py-6 shadow-md mb-8">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-2xl md:text-3xl font-bold">PHIẾU LUYỆN TẬP TIẾNG ANH 7 - UNIT 3</h1>
+            <p class="text-indigo-100 mt-1">Chủ đề: Community Service (Skills 1 & Looking Back)</p>
+        </div>
+    </header>
+
+    <div class="max-w-4xl mx-auto px-4 space-y-8">
+
+        <!-- SECTION: VOCABULARY WITH AUDIO -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h2 class="text-xl font-bold text-indigo-700 mb-4 flex items-center">
+                <i class="fas fa-volume-up mr-2"></i> Từ Vựng Cốt Lõi (Vocabulary & Pronunciation)
+            </h2>
+            <p class="text-sm text-slate-600 mb-4">Nhấn vào biểu tượng loa để nghe phát âm của từng từ.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="vocab-list">
+                <!-- Vocabulary Items injected by JS -->
+            </div>
+        </section>
+
+        <!-- SECTION: READING & SKILLS 1 -->
+        <div class="border-t-2 border-indigo-200 pt-6">
+            <span class="bg-indigo-600 text-white font-bold px-3 py-1 rounded-full text-sm uppercase">Skills 1</span>
+        </div>
+
+        <!-- Reading Passage -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-slate-800">Reading Passage: Bright Future School</h2>
+                <button onclick="toggleTranslation('reading-trans')" class="text-xs bg-indigo-50 text-indigo-600 hover:bg-indigo-100 font-semibold px-3 py-1.5 rounded-lg transition">
+                    <i class="fas fa-language mr-1"></i> <span id="trans-btn-text">Hiện bản dịch tiếng Việt</span>
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-4">
+                <div class="prose max-w-none text-slate-700 bg-slate-50 p-4 rounded-lg border border-slate-200 leading-relaxed">
+                    <p class="mb-2"><strong>Bright Future School</strong> has many community activities for students. The school believes that a good way for students to develop themselves is through community service. All students can join any of these different projects:</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-2">
+                        <li><strong>Tutoring:</strong> Upper grade students <strong>tutor</strong> lower grade students.</li>
+                        <li><strong>Postcard-to-Help:</strong> Students make and sell postcards to raise money for local children.</li>
+                        <li><strong>Visit-to-Read:</strong> Students visit a nursing home <strong>monthly</strong> and read books to the elderly.</li>
+                        <li><strong>Garden-to-Give:</strong> Students grow vegetables and <strong>donate</strong> them to local schools.</li>
+                        <li><strong>Paper-Plant-Exchange:</strong> Students collect paper and <strong>exchange</strong> it for plants. They then look after the plants in their school garden.</li>
+                    </ul>
+                    <p>Students learn that they can help people and the world around them when they do community service. They feel useful and <strong>proud</strong> because they do good things.</p>
+                </div>
+
+                <!-- Vietnamese Translation (Hidden by default) -->
+                <div id="reading-trans" class="hidden prose max-w-none text-slate-700 bg-amber-50 p-4 rounded-lg border border-amber-200 leading-relaxed text-sm">
+                    <h4 class="font-bold text-amber-800 mb-1">Bản dịch tiếng Việt:</h4>
+                    <p class="mb-2"><strong>Trường Tương Lai Sáng</strong> có nhiều hoạt động cộng đồng cho học sinh. Nhà trường tin rằng một cách tốt để học sinh phát triển bản thân là thông qua phục vụ cộng đồng. Tất cả học sinh có thể tham gia vào bất kỳ dự án khác nhau nào sau đây:</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-2">
+                        <li><strong>Gia sư (Tutoring):</strong> Học sinh lớp trên phụ đạo/dạy kèm cho học sinh lớp dưới.</li>
+                        <li><strong>Bưu thiếp giúp đỡ (Postcard-to-Help):</strong> Học sinh làm và bán bưu thiếp để gây quỹ cho trẻ em địa phương.</li>
+                        <li><strong>Đến đọc sách (Visit-to-Read):</strong> Học sinh đến thăm viện dưỡng lão hàng tháng và đọc sách cho người già.</li>
+                        <li><strong>Vườn rau trao tặng (Garden-to-Give):</strong> Học sinh trồng rau và quyên góp cho các trường học địa phương.</li>
+                        <li><strong>Đổi giấy lấy cây (Paper-Plant-Exchange):</strong> Học sinh thu gom giấy và đổi lấy cây xanh. Sau đó các em chăm sóc cây trong vườn trường.</li>
+                    </ul>
+                    <p>Học sinh học được rằng các em có thể giúp đỡ mọi người và thế giới xung quanh khi làm việc cộng đồng. Các em cảm thấy có ích và tự hào vì đã làm được những việc tốt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading Ex 1 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">1. Reading - Ex 1: Circle the activities you would like to do at your school.</h3>
+            <p class="text-xs text-slate-500 mb-4">Chọn các hoạt động bạn muốn tham gia ở trường.</p>
+            <form id="reading-ex1-form" class="space-y-2">
+                <label class="flex items-center space-x-3 p-3 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" name="r_ex1" value="A" class="w-4 h-4 text-indigo-600">
+                    <span>A. growing vegetables in the school garden (Trồng rau trong vườn trường)</span>
+                </label>
+                <label class="flex items-center space-x-3 p-3 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" name="r_ex1" value="B" class="w-4 h-4 text-indigo-600">
+                    <span>B. tutoring other students (Phụ đạo cho các học sinh khác)</span>
+                </label>
+                <label class="flex items-center space-x-3 p-3 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" name="r_ex1" value="C" class="w-4 h-4 text-indigo-600">
+                    <span>C. collecting books for the school library (Quyên góp sách cho thư viện trường)</span>
+                </label>
+            </form>
+            <div id="r-ex1-feedback" class="mt-4 hidden p-4 rounded-lg text-sm"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkReadingEx1()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetReadingEx1()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Reading Ex 2 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">2. Reading - Ex 2: Match the highlighted words with their meanings.</h3>
+            <p class="text-xs text-slate-500 mb-4">Nối từ được tô đậm trong bài đọc với nghĩa phù hợp.</p>
+            <form id="reading-ex2-form" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">1. tutor (v)</label>
+                        <select name="r_ex2_1" class="w-full p-2 border border-slate-300 rounded-lg text-sm">
+                            <option value="">-- Chọn nghĩa đúng --</option>
+                            <option value="give">give</option>
+                            <option value="give and receive">give and receive</option>
+                            <option value="every month">every month</option>
+                            <option value="pleased">pleased</option>
+                            <option value="teach">teach</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">2. monthly (adv)</label>
+                        <select name="r_ex2_2" class="w-full p-2 border border-slate-300 rounded-lg text-sm">
+                            <option value="">-- Chọn nghĩa đúng --</option>
+                            <option value="give">give</option>
+                            <option value="give and receive">give and receive</option>
+                            <option value="every month">every month</option>
+                            <option value="pleased">pleased</option>
+                            <option value="teach">teach</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">3. donate (v)</label>
+                        <select name="r_ex2_3" class="w-full p-2 border border-slate-300 rounded-lg text-sm">
+                            <option value="">-- Chọn nghĩa đúng --</option>
+                            <option value="give">give</option>
+                            <option value="give and receive">give and receive</option>
+                            <option value="every month">every month</option>
+                            <option value="pleased">pleased</option>
+                            <option value="teach">teach</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">4. exchange (v)</label>
+                        <select name="r_ex2_4" class="w-full p-2 border border-slate-300 rounded-lg text-sm">
+                            <option value="">-- Chọn nghĩa đúng --</option>
+                            <option value="give">give</option>
+                            <option value="give and receive">give and receive</option>
+                            <option value="every month">every month</option>
+                            <option value="pleased">pleased</option>
+                            <option value="teach">teach</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-slate-700 mb-1">5. proud (adj)</label>
+                        <select name="r_ex2_5" class="w-full p-2 border border-slate-300 rounded-lg text-sm">
+                            <option value="">-- Chọn nghĩa đúng --</option>
+                            <option value="give">give</option>
+                            <option value="give and receive">give and receive</option>
+                            <option value="every month">every month</option>
+                            <option value="pleased">pleased</option>
+                            <option value="teach">teach</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div id="r-ex2-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkReadingEx2()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetReadingEx2()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Reading Ex 3 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">3. Reading - Ex 3: Read the passage again and tick (✓) T (True) or F (False).</h3>
+            <p class="text-xs text-slate-500 mb-4">Đọc lại bài đọc và chọn Đúng (True) hoặc Sai (False).</p>
+            <form id="reading-ex3-form" class="space-y-4">
+                <div class="border-b border-slate-100 pb-3">
+                    <p class="text-sm font-medium mb-2">1. Community service allows students to develop themselves.</p>
+                    <div class="flex gap-4 text-sm">
+                        <label class="flex items-center"><input type="radio" name="r_ex3_1" value="T" class="mr-2"> True</label>
+                        <label class="flex items-center"><input type="radio" name="r_ex3_1" value="F" class="mr-2"> False</label>
+                    </div>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <p class="text-sm font-medium mb-2">2. Each student can join only one project.</p>
+                    <div class="flex gap-4 text-sm">
+                        <label class="flex items-center"><input type="radio" name="r_ex3_2" value="T" class="mr-2"> True</label>
+                        <label class="flex items-center"><input type="radio" name="r_ex3_2" value="F" class="mr-2"> False</label>
+                    </div>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <p class="text-sm font-medium mb-2">3. They tutor younger students.</p>
+                    <div class="flex gap-4 text-sm">
+                        <label class="flex items-center"><input type="radio" name="r_ex3_3" value="T" class="mr-2"> True</label>
+                        <label class="flex items-center"><input type="radio" name="r_ex3_3" value="F" class="mr-2"> False</label>
+                    </div>
+                </div>
+                <div class="border-b border-slate-100 pb-3">
+                    <p class="text-sm font-medium mb-2">4. Local children receive postcards from the Postcard-to-Help project.</p>
+                    <div class="flex gap-4 text-sm">
+                        <label class="flex items-center"><input type="radio" name="r_ex3_4" value="T" class="mr-2"> True</label>
+                        <label class="flex items-center"><input type="radio" name="r_ex3_4" value="F" class="mr-2"> False</label>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium mb-2">5. Students receive plants when they give paper.</p>
+                    <div class="flex gap-4 text-sm">
+                        <label class="flex items-center"><input type="radio" name="r_ex3_5" value="T" class="mr-2"> True</label>
+                        <label class="flex items-center"><input type="radio" name="r_ex3_5" value="F" class="mr-2"> False</label>
+                    </div>
+                </div>
+            </form>
+            <div id="r-ex3-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkReadingEx3()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetReadingEx3()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Speaking Ex 4 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">4. Speaking - Ex 4: Match students with suitable projects.</h3>
+            <p class="text-xs text-slate-500 mb-2">Đọc mô tả học sinh và chọn dự án phù hợp nhất cho họ.</p>
+            <div class="bg-indigo-50 p-3 rounded-lg text-xs font-medium text-indigo-800 mb-4 grid grid-cols-2 md:grid-cols-3 gap-2">
+                <div>A. Tutoring</div>
+                <div>B. Postcard-to-Help</div>
+                <div>C. Visit-to-Read</div>
+                <div>D. Garden-to-Give</div>
+                <div>E. Paper-Plant-Exchange</div>
+            </div>
+            <form id="speaking-ex4-form" class="space-y-4 text-sm">
+                <div>
+                    <label class="block font-medium mb-1">1. Nick likes reading books. He has a very nice voice, and he is also patient.</label>
+                    <select name="sp_4_1" class="w-full p-2 border border-slate-300 rounded-lg">
+                        <option value="">-- Chọn dự án --</option>
+                        <option value="A">A. Tutoring</option>
+                        <option value="B">B. Postcard-to-Help</option>
+                        <option value="C">C. Visit-to-Read</option>
+                        <option value="D">D. Garden-to-Give</option>
+                        <option value="E">E. Paper-Plant-Exchange</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-medium mb-1">2. Ann is very good at maths and literature. She also loves children.</label>
+                    <select name="sp_4_2" class="w-full p-2 border border-slate-300 rounded-lg">
+                        <option value="">-- Chọn dự án --</option>
+                        <option value="A">A. Tutoring</option>
+                        <option value="B">B. Postcard-to-Help</option>
+                        <option value="C">C. Visit-to-Read</option>
+                        <option value="D">D. Garden-to-Give</option>
+                        <option value="E">E. Paper-Plant-Exchange</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-medium mb-1">3. Minh loves collecting and making postcards.</label>
+                    <select name="sp_4_3" class="w-full p-2 border border-slate-300 rounded-lg">
+                        <option value="">-- Chọn dự án --</option>
+                        <option value="A">A. Tutoring</option>
+                        <option value="B">B. Postcard-to-Help</option>
+                        <option value="C">C. Visit-to-Read</option>
+                        <option value="D">D. Garden-to-Give</option>
+                        <option value="E">E. Paper-Plant-Exchange</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-medium mb-1">4. Mark loves nature. He likes watching programmes about plants. He also likes being outdoors.</label>
+                    <select name="sp_4_4" class="w-full p-2 border border-slate-300 rounded-lg">
+                        <option value="">-- Chọn dự án --</option>
+                        <option value="A">A. Tutoring</option>
+                        <option value="B">B. Postcard-to-Help</option>
+                        <option value="C">C. Visit-to-Read</option>
+                        <option value="D">D. Garden-to-Give</option>
+                        <option value="E">E. Paper-Plant-Exchange</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-medium mb-1">5. Tom likes collecting newspapers.</label>
+                    <select name="sp_4_5" class="w-full p-2 border border-slate-300 rounded-lg">
+                        <option value="">-- Chọn dự án --</option>
+                        <option value="A">A. Tutoring</option>
+                        <option value="B">B. Postcard-to-Help</option>
+                        <option value="C">C. Visit-to-Read</option>
+                        <option value="D">D. Garden-to-Give</option>
+                        <option value="E">E. Paper-Plant-Exchange</option>
+                    </select>
+                </div>
+            </form>
+            <div id="sp-ex4-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkSpeakingEx4()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetSpeakingEx4()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Writing Ex 5 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">5. Writing - Ex 5: Write an email about your school activities last summer.</h3>
+            <p class="text-xs text-slate-500 mb-4">Viết email (khoảng 70 từ) gửi cho Tom kể về các hoạt động ở trường em hè qua.</p>
+            
+            <div class="bg-slate-100 p-4 rounded-lg mb-4 text-sm font-mono border border-slate-300">
+                <p><strong>To:</strong> tom@webmail.com</p>
+                <p><strong>Subject:</strong> School activities last summer</p>
+                <hr class="my-2 border-slate-300">
+                <p>Dear Tom,</p>
+                <p>Things are good. We also did some interesting activities last summer.</p>
+                <textarea id="writing-email-input" rows="5" class="w-full mt-2 p-3 border border-slate-300 rounded-lg font-sans text-sm focus:ring-2 focus:ring-indigo-500" placeholder="Viết nội dung tiếp theo ở đây..."></textarea>
+                <p class="mt-2">See you soon,<br>Nam</p>
+            </div>
+
+            <div id="writing-feedback" class="mt-4 hidden p-4 rounded-lg text-sm bg-indigo-50 border border-indigo-200 text-indigo-900"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkWriting()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Xem bài mẫu gợi ý</button>
+                <button type="button" onclick="resetWriting()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- SECTION: LOOKING BACK -->
+        <div class="border-t-2 border-indigo-200 pt-6">
+            <span class="bg-emerald-600 text-white font-bold px-3 py-1 rounded-full text-sm uppercase">Looking Back</span>
+        </div>
+
+        <!-- Looking Back Ex 1 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">1. Looking Back - Ex 1: Complete the table with words/phrases from the box.</h3>
+            <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-sm text-center mb-4 font-semibold text-amber-900">
+                homeless children | food | litter | the elderly | bottles | books
+            </div>
+            <form id="lb-ex1-form" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                    <h4 class="font-bold text-blue-800 text-center mb-2">help</h4>
+                    <div class="space-y-2">
+                        <input type="text" name="lb_1_help1" placeholder="Từ/Cụm từ 1" class="w-full p-2 border rounded text-sm">
+                        <input type="text" name="lb_1_help2" placeholder="Từ/Cụm từ 2" class="w-full p-2 border rounded text-sm">
+                    </div>
+                </div>
+                <div class="bg-pink-50 p-4 rounded-lg border border-pink-200">
+                    <h4 class="font-bold text-pink-800 text-center mb-2">pick up</h4>
+                    <div class="space-y-2">
+                        <input type="text" name="lb_1_pickup1" placeholder="Từ/Cụm từ 1" class="w-full p-2 border rounded text-sm">
+                        <input type="text" name="lb_1_pickup2" placeholder="Từ/Cụm từ 2" class="w-full p-2 border rounded text-sm">
+                    </div>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <h4 class="font-bold text-yellow-800 text-center mb-2">donate</h4>
+                    <div class="space-y-2">
+                        <input type="text" name="lb_1_donate1" placeholder="Từ/Cụm từ 1" class="w-full p-2 border rounded text-sm">
+                        <input type="text" name="lb_1_donate2" placeholder="Từ/Cụm từ 2" class="w-full p-2 border rounded text-sm">
+                    </div>
+                </div>
+            </form>
+            <div id="lb-ex1-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkLBEx1()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetLBEx1()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Looking Back Ex 2 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">2. Looking Back - Ex 2: Complete each sentence with correct verb form from Ex 1.</h3>
+            <p class="text-xs text-slate-500 mb-4">Điền cụm từ phù hợp ở bài 1 (chia động từ thì quá khứ đơn nếu cần).</p>
+            <form id="lb-ex2-form" class="space-y-3 text-sm">
+                <div>
+                    1. The club <input type="text" name="lb_2_1" class="border-b-2 border-indigo-500 px-2 py-1 mx-1 w-48 text-center font-semibold"> to some poor farmers last week.
+                </div>
+                <div>
+                    2. Yesterday, we <input type="text" name="lb_2_2" class="border-b-2 border-indigo-500 px-2 py-1 mx-1 w-48 text-center font-semibold"> around our area and recycled them.
+                </div>
+                <div>
+                    3. We <input type="text" name="lb_2_3" class="border-b-2 border-indigo-500 px-2 py-1 mx-1 w-48 text-center font-semibold"> do the cleaning last summer.
+                </div>
+                <div>
+                    4. Last month, our club <input type="text" name="lb_2_4" class="border-b-2 border-indigo-500 px-2 py-1 mx-1 w-48 text-center font-semibold"> to the community library.
+                </div>
+                <div>
+                    5. In our recent project, we <input type="text" name="lb_2_5" class="border-b-2 border-indigo-500 px-2 py-1 mx-1 w-48 text-center font-semibold"> learn to read and write.
+                </div>
+            </form>
+            <div id="lb-ex2-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkLBEx2()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetLBEx2()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Looking Back Ex 3 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">3. Looking Back - Ex 3: Grammar - Complete the passage.</h3>
+            <p class="text-xs text-slate-500 mb-2">Chia dạng đúng của động từ trong khung để hoàn thành đoạn văn.</p>
+            <div class="bg-slate-100 p-2 rounded mb-4 text-center font-semibold text-sm">donate | collect | have | sell | go</div>
+            
+            <div class="text-sm leading-relaxed bg-slate-50 p-4 rounded-lg border border-slate-200">
+                <strong>Warm Clothes</strong> is a famous volunteer group in Viet Nam. Its members are both parents and their children. Last year, they (1) 
+                <input type="text" id="lb_3_1" class="border-b-2 border-indigo-500 px-2 py-0.5 w-24 text-center font-semibold"> 
+                many activities to help their community. The group (2) 
+                <input type="text" id="lb_3_2" class="border-b-2 border-indigo-500 px-2 py-0.5 w-24 text-center font-semibold"> 
+                clothes and sent them to poor people in rural areas. The parents taught their children to make things from bamboo and bottles. They then (3) 
+                <input type="text" id="lb_3_3" class="border-b-2 border-indigo-500 px-2 py-0.5 w-24 text-center font-semibold"> 
+                these to buy books, and (4) 
+                <input type="text" id="lb_3_4" class="border-b-2 border-indigo-500 px-2 py-0.5 w-24 text-center font-semibold"> 
+                them to village children. They also (5) 
+                <input type="text" id="lb_3_5" class="border-b-2 border-indigo-500 px-2 py-0.5 w-24 text-center font-semibold"> 
+                to the villages and tutored small kids there. They really brought love to those small villages.
+            </div>
+
+            <div id="lb-ex3-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkLBEx3()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetLBEx3()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+        <!-- Looking Back Ex 4 -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">4. Looking Back - Ex 4: Write full sentences in the Past Simple.</h3>
+            <p class="text-xs text-slate-500 mb-4">Viết câu hoàn chỉnh dựa trên gợi ý (sử dụng thì Quá Khứ Đơn).</p>
+            
+            <form id="lb-ex4-form" class="space-y-4 text-sm">
+                <div>
+                    <p class="font-medium">1. Mi: singing and dancing for the elderly at a nursing home</p>
+                    <input type="text" name="lb_4_1" placeholder="Nhập câu hoàn chỉnh..." class="w-full mt-1 p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <p class="font-medium">2. Mark and his friends: collecting books and setting up a community library</p>
+                    <input type="text" name="lb_4_2" placeholder="Nhập câu hoàn chỉnh..." class="w-full mt-1 p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <p class="font-medium">3. Lan and Mai: growing and donating vegetables to a primary school</p>
+                    <input type="text" name="lb_4_3" placeholder="Nhập câu hoàn chỉnh..." class="w-full mt-1 p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <p class="font-medium">4. Minh and his friends: giving food to young patients in a hospital</p>
+                    <input type="text" name="lb_4_4" placeholder="Nhập câu hoàn chỉnh..." class="w-full mt-1 p-2 border border-slate-300 rounded-lg">
+                </div>
+                <div>
+                    <p class="font-medium">5. Tom: making and sending postcards to the elderly at Christmas</p>
+                    <input type="text" name="lb_4_5" placeholder="Nhập câu hoàn chỉnh..." class="w-full mt-1 p-2 border border-slate-300 rounded-lg">
+                </div>
+            </form>
+            
+            <div id="lb-ex4-feedback" class="mt-4 hidden p-4 rounded-lg text-sm space-y-2"></div>
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="checkLBEx4()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm">Nộp bài / Kiểm tra</button>
+                <button type="button" onclick="resetLBEx4()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm">Làm lại</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Vocabulary Data
+        const vocabList = [
+            { word: 'Community service', pos: 'n', meaning: 'Dịch vụ/hoạt động cộng đồng' },
+            { word: 'Tutor', pos: 'v', meaning: 'Phụ đạo, dạy kèm' },
+            { word: 'Nursing home', pos: 'n', meaning: 'Viện dưỡng lão' },
+            { word: 'Donate', pos: 'v', meaning: 'Quyên góp, hiến tặng' },
+            { word: 'Exchange', pos: 'v', meaning: 'Trao đổi, đổi lấy' },
+            { word: 'Proud', pos: 'adj', meaning: 'Tự hào, hãnh diện' },
+            { word: 'Homeless children', pos: 'n', meaning: 'Trẻ em lang thang/vô gia cư' },
+            { word: 'Pick up litter', pos: 'v phr', meaning: 'Nhặt rác' },
+            { word: 'Elderly', pos: 'adj/n', meaning: 'Người cao tuổi' }
+        ];
+
+        // Render Vocabulary
+        const vocabContainer = document.getElementById('vocab-list');
+        vocabList.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'flex items-center justify-between p-3 bg-indigo-50/50 rounded-lg border border-indigo-100';
+            div.innerHTML = `
+                <div>
+                    <span class="font-bold text-indigo-900">${item.word}</span>
+                    <span class="text-xs text-slate-500 italic">(${item.pos})</span>
+                    <p class="text-xs text-slate-600">${item.meaning}</p>
+                </div>
+                <button onclick="speak('${item.word}')" class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700 transition">
+                    <i class="fas fa-volume-up text-xs"></i>
+                </button>
+            `;
+            vocabContainer.appendChild(div);
+        });
+
+        // Text-to-Speech
+        function speak(text) {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('Trình duyệt của bạn không hỗ trợ phát âm tự động.');
+            }
+        }
+
+        // Toggle Translation
+        function toggleTranslation(id) {
+            const el = document.getElementById(id);
+            const btnText = document.getElementById('trans-btn-text');
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                btnText.textContent = 'Ẩn bản dịch tiếng Việt';
+            } else {
+                el.classList.add('hidden');
+                btnText.textContent = 'Hiện bản dịch tiếng Việt';
+            }
+        }
+
+        // Check helper
+        function alertUnfinished() {
+            alert('Vui lòng làm hết tất cả các câu trước khi bấm nộp bài!');
+        }
+
+        // --- CHECKING LOGIC ---
+
+        // Reading Ex 1
+        function checkReadingEx1() {
+            const checkboxes = document.querySelectorAll('input[name="r_ex1"]:checked');
+            const fb = document.getElementById('r-ex1-feedback');
+            if (checkboxes.length === 0) {
+                alertUnfinished();
+                return;
+            }
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-emerald-50 border border-emerald-200 text-emerald-900";
+            fb.innerHTML = `<strong>Tuyệt vời!</strong> Bạn đã chọn ${checkboxes.length} lựa chọn. Trong dạng bài bày tỏ ý kiến cá nhân này, mọi lựa chọn tích cực đều chính xác. Cảm ơn bạn đã sẵn sàng tham gia các hoạt động cộng đồng!`;
+            fb.classList.remove('hidden');
+        }
+        function resetReadingEx1() {
+            document.querySelectorAll('input[name="r_ex1"]').forEach(cb => cb.checked = false);
+            document.getElementById('r-ex1-feedback').classList.add('hidden');
+        }
+
+        // Reading Ex 2
+        function checkReadingEx2() {
+            const form = document.getElementById('reading-ex2-form');
+            const answers = { r_ex2_1: 'teach', r_ex2_2: 'every month', r_ex2_3: 'give', r_ex2_4: 'give and receive', r_ex2_5: 'pleased' };
+            const trans = {
+                r_ex2_1: '1. tutor = teach (dạy kèm, phụ đạo)',
+                r_ex2_2: '2. monthly = every month (hàng tháng)',
+                r_ex2_3: '3. donate = give (quyên góp, cho đi)',
+                r_ex2_4: '4. exchange = give and receive (trao đổi, cho và nhận)',
+                r_ex2_5: '5. proud = pleased (tự hào, hài lòng)'
+            };
+
+            let filled = true;
+            for (let key in answers) {
+                if (!form[key].value) filled = false;
+            }
+            if (!filled) { alertUnfinished(); return; }
+
+            let correctCount = 0;
+            let html = '';
+            for (let key in answers) {
+                const userAns = form[key].value;
+                const isCorrect = userAns === answers[key];
+                if (isCorrect) correctCount++;
+                html += `<div class="${isCorrect ? 'text-emerald-700' : 'text-rose-700'} font-medium">
+                    ${isCorrect ? '✓' : '✗'} ${trans[key]} ${!isCorrect ? `(Đáp án đúng: <strong>${answers[key]}</strong>)` : ''}
+                </div>`;
+            }
+
+            const fb = document.getElementById('r-ex2-feedback');
+            fb.className = `mt-4 p-4 rounded-lg text-sm ${correctCount === 5 ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'}`;
+            fb.innerHTML = `<p class="font-bold mb-2">Kết quả: ${correctCount}/5 câu đúng</p>` + html;
+            fb.classList.remove('hidden');
+        }
+        function resetReadingEx2() {
+            document.getElementById('reading-ex2-form').reset();
+            document.getElementById('r-ex2-feedback').classList.add('hidden');
+        }
+
+        // Reading Ex 3
+        function checkReadingEx3() {
+            const form = document.getElementById('reading-ex3-form');
+            const answers = { r_ex3_1: 'T', r_ex3_2: 'F', r_ex3_3: 'T', r_ex3_4: 'F', r_ex3_5: 'T' };
+            const explain = {
+                r_ex3_1: '1. True - Đoạn văn viết: "...a good way for students to develop themselves is through community service."',
+                r_ex3_2: '2. False - Đoạn văn viết: "All students can join ANY of these different projects" (có thể tham gia bất kỳ dự án nào).',
+                r_ex3_3: '3. True - Đoạn văn viết: "Upper grade students tutor lower grade students."',
+                r_ex3_4: '4. False - Học sinh làm bưu thiếp để BÁN lấy tiền quyên góp chứ không gửi trực tiếp bưu thiếp ("make and sell postcards to raise money").',
+                r_ex3_5: '5. True - Đoạn văn viết: "Students collect paper and exchange it for plants."'
+            };
+
+            let filled = true;
+            for (let key in answers) {
+                if (!form[key].value) filled = false;
+            }
+            if (!filled) { alertUnfinished(); return; }
+
+            let correctCount = 0;
+            let html = '';
+            for (let key in answers) {
+                const userAns = form[key].value;
+                const isCorrect = userAns === answers[key];
+                if (isCorrect) correctCount++;
+                html += `<div class="p-2 rounded ${isCorrect ? 'bg-emerald-100 text-emerald-900' : 'bg-rose-100 text-rose-900'}">
+                    <strong>Câu ${key.slice(-1)}: ${isCorrect ? 'ĐÚNG' : 'SAI'}</strong> - ${explain[key]}
+                </div>`;
+            }
+
+            const fb = document.getElementById('r-ex3-feedback');
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-slate-100 border border-slate-300";
+            fb.innerHTML = `<p class="font-bold mb-2 text-base">Điểm số: ${correctCount}/5</p>` + html;
+            fb.classList.remove('hidden');
+        }
+        function resetReadingEx3() {
+            document.getElementById('reading-ex3-form').reset();
+            document.getElementById('r-ex3-feedback').classList.add('hidden');
+        }
+
+        // Speaking Ex 4
+        function checkSpeakingEx4() {
+            const form = document.getElementById('speaking-ex4-form');
+            const answers = { sp_4_1: 'C', sp_4_2: 'A', sp_4_3: 'B', sp_4_4: 'D', sp_4_5: 'E' };
+            const explain = {
+                sp_4_1: '1. Nick thích đọc sách, giọng hay -> C. Visit-to-Read (Đọc sách cho người già).',
+                sp_4_2: '2. Ann giỏi Toán, Văn và yêu trẻ em -> A. Tutoring (Dạy kèm/Phụ đạo).',
+                sp_4_3: '3. Minh thích sưu tầm và làm bưu thiếp -> B. Postcard-to-Help (Bưu thiếp giúp đỡ).',
+                sp_4_4: '4. Mark yêu thiên nhiên, thích cây cối ngoài trời -> D. Garden-to-Give (Làm vườn tặng rau).',
+                sp_4_5: '5. Tom thích thu gom báo cũ -> E. Paper-Plant-Exchange (Đổi giấy lấy cây).'
+            };
+
+            let filled = true;
+            for (let key in answers) {
+                if (!form[key].value) filled = false;
+            }
+            if (!filled) { alertUnfinished(); return; }
+
+            let correctCount = 0;
+            let html = '';
+            for (let key in answers) {
+                const userAns = form[key].value;
+                const isCorrect = userAns === answers[key];
+                if (isCorrect) correctCount++;
+                html += `<div class="p-2 rounded ${isCorrect ? 'bg-emerald-100 text-emerald-900' : 'bg-rose-100 text-rose-900'}">
+                    ${explain[key]} ${!isCorrect ? `(Đáp án bạn chọn: ${userAns || 'Chưa chọn'})` : ''}
+                </div>`;
+            }
+
+            const fb = document.getElementById('sp-ex4-feedback');
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-slate-100 border border-slate-300";
+            fb.innerHTML = `<p class="font-bold mb-2 text-base">Kết quả: ${correctCount}/5 câu đúng</p>` + html;
+            fb.classList.remove('hidden');
+        }
+        function resetSpeakingEx4() {
+            document.getElementById('speaking-ex4-form').reset();
+            document.getElementById('sp-ex4-feedback').classList.add('hidden');
+        }
+
+        // Writing
+        function checkWriting() {
+            const val = document.getElementById('writing-email-input').value.trim();
+            if (val.length < 10) {
+                alert('Vui lòng viết đoạn văn dài hơn trước khi xem bài mẫu!');
+                return;
+            }
+            const fb = document.getElementById('writing-feedback');
+            fb.innerHTML = `
+                <h4 class="font-bold text-base mb-2">Bài mẫu gợi ý (Sample Answer):</h4>
+                <p class="italic mb-2">"We collected plastic bottles and old paper to exchange for trees. We also planted new flowers in the school garden and watered them every afternoon. In addition, my friends and I tutored lower grade students in English. It was a wonderful summer because we did many useful things for our community."</p>
+                <hr class="my-2 border-indigo-200">
+                <p><strong>Dịch nghĩa bài mẫu:</strong> Chúng tớ đã thu gom chai nhựa và giấy cũ để đổi lấy cây xanh. Chúng tớ cũng trồng thêm hoa mới trong vườn trường và tưới nước hàng chiều. Ngoài ra, tớ và các bạn đã phụ đạo tiếng Anh cho các em lớp dưới. Đó là một mùa hè tuyệt vời vì chúng tớ đã làm được nhiều việc có ích cho cộng đồng.</p>
+            `;
+            fb.classList.remove('hidden');
+        }
+        function resetWriting() {
+            document.getElementById('writing-email-input').value = '';
+            document.getElementById('writing-feedback').classList.add('hidden');
+        }
+
+        // Looking Back Ex 1
+        function checkLBEx1() {
+            const form = document.getElementById('lb-ex1-form');
+            const userHelp = [form.lb_1_help1.value.toLowerCase().trim(), form.lb_1_help2.value.toLowerCase().trim()];
+            const userPick = [form.lb_1_pickup1.value.toLowerCase().trim(), form.lb_1_pickup2.value.toLowerCase().trim()];
+            const userDonate = [form.lb_1_donate1.value.toLowerCase().trim(), form.lb_1_donate2.value.toLowerCase().trim()];
+
+            if (userHelp.includes('') || userPick.includes('') || userDonate.includes('')) {
+                alertUnfinished();
+                return;
+            }
+
+            const validHelp = ['homeless children', 'the elderly'];
+            const validPick = ['litter', 'bottles'];
+            const validDonate = ['food', 'books'];
+
+            let score = 0;
+            userHelp.forEach(v => { if(validHelp.includes(v)) score++; });
+            userPick.forEach(v => { if(validPick.includes(v)) score++; });
+            userDonate.forEach(v => { if(validDonate.includes(v)) score++; });
+
+            const fb = document.getElementById('lb-ex1-feedback');
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-slate-100 border border-slate-300";
+            fb.innerHTML = `
+                <p class="font-bold mb-2">Kết quả: Đúng ${score}/6 từ/cụm từ</p>
+                <div class="text-xs space-y-1">
+                    <p><strong>help:</strong> homeless children (trẻ em lang thang), the elderly (người cao tuổi)</p>
+                    <p><strong>pick up:</strong> litter (rác), bottles (vỏ chai)</p>
+                    <p><strong>donate:</strong> food (thức ăn), books (sách vở)</p>
+                </div>
+            `;
+            fb.classList.remove('hidden');
+        }
+        function resetLBEx1() {
+            document.getElementById('lb-ex1-form').reset();
+            document.getElementById('lb-ex1-feedback').classList.add('hidden');
+        }
+
+        // Looking Back Ex 2
+        function checkLBEx2() {
+            const form = document.getElementById('lb-ex2-form');
+            const ans = [
+                ['donated food'],
+                ['picked up bottles', 'picked up litter'],
+                ['helped'],
+                ['donated books'],
+                ['helped homeless children', 'helped the elderly']
+            ];
+
+            const userAns = [
+                form.lb_2_1.value.toLowerCase().trim(),
+                form.lb_2_2.value.toLowerCase().trim(),
+                form.lb_2_3.value.toLowerCase().trim(),
+                form.lb_2_4.value.toLowerCase().trim(),
+                form.lb_2_5.value.toLowerCase().trim()
+            ];
+
+            if (userAns.some(a => a === '')) { alertUnfinished(); return; }
+
+            let html = '';
+            let correct = 0;
+            const keyTrans = [
+                '1. donated food (đã quyên góp thức ăn)',
+                '2. picked up bottles / litter (đã nhặt vỏ chai / rác)',
+                '3. helped (đã giúp đỡ)',
+                '4. donated books (đã quyên góp sách)',
+                '5. helped homeless children / elderly (đã giúp đỡ trẻ em lang thang / người già)'
+            ];
+
+            userAns.forEach((a, idx) => {
+                const isRight = ans[idx].includes(a);
+                if (isRight) correct++;
+                html += `<div class="${isRight ? 'text-emerald-700' : 'text-rose-700'}">
+                    ${isRight ? '✓' : '✗'} Câu ${idx+1}: Gợi ý chuẩn: <strong>${keyTrans[idx]}</strong>
+                </div>`;
+            });
+
+            const fb = document.getElementById('lb-ex2-feedback');
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-slate-100 border border-slate-300";
+            fb.innerHTML = `<p class="font-bold mb-2">Đúng ${correct}/5 câu</p>` + html;
+            fb.classList.remove('hidden');
+        }
+        function resetLBEx2() {
+            document.getElementById('lb-ex2-form').reset();
+            document.getElementById('lb-ex2-feedback').classList.add('hidden');
+        }
+
+        // Looking Back Ex 3
+        function checkLBEx3() {
+            const u1 = document.getElementById('lb_3_1').value.toLowerCase().trim();
+            const u2 = document.getElementById('lb_3_2').value.toLowerCase().trim();
+            const u3 = document.getElementById('lb_3_3').value.toLowerCase().trim();
+            const u4 = document.getElementById('lb_3_4').value.toLowerCase().trim();
+            const u5 = document.getElementById('lb_3_5').value.toLowerCase().trim();
+
+            if (!u1 || !u2 || !u3 || !u4 || !u5) { alertUnfinished(); return; }
+
+            const key = ['had', 'collected', 'sold', 'donated', 'went'];
+            const explain = [
+                '(1) had - Quá khứ của "have" (đã có nhiều hoạt động)',
+                '(2) collected - Quá khứ của "collect" (đã thu gom quần áo)',
+                '(3) sold - Quá khứ của "sell" (bán đồ lấy tiền)',
+                '(4) donated - Quá khứ của "donate" (quyên góp sách cho trẻ em)',
+                '(5) went - Quá khứ của "go" (đã đi đến các làng)'
+            ];
+
+            const userInputs = [u1, u2, u3, u4, u5];
+            let correct = 0;
+            let html = '';
+
+            userInputs.forEach((u, i) => {
+                const isRight = u === key[i];
+                if (isRight) correct++;
+                html += `<div class="${isRight ? 'text-emerald-700' : 'text-rose-700'} font-medium">
+                    ${isRight ? '✓' : '✗'} Ô ${i+1}: <strong>${key[i]}</strong> ${explain[i]}
+                </div>`;
+            });
+
+            const fb = document.getElementById('lb-ex3-feedback');
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-slate-100 border border-slate-300";
+            fb.innerHTML = `<p class="font-bold mb-2">Kết quả bài chia động từ: ${correct}/5</p>` + html;
+            fb.classList.remove('hidden');
+        }
+        function resetLBEx3() {
+            for(let i=1; i<=5; i++) document.getElementById(`lb_3_${i}`).value = '';
+            document.getElementById('lb-ex3-feedback').classList.add('hidden');
+        }
+
+        // Looking Back Ex 4
+        function checkLBEx4() {
+            const form = document.getElementById('lb-ex4-form');
+            const userAns = [
+                form.lb_4_1.value.trim(),
+                form.lb_4_2.value.trim(),
+                form.lb_4_3.value.trim(),
+                form.lb_4_4.value.trim(),
+                form.lb_4_5.value.trim()
+            ];
+
+            if (userAns.some(a => a === '')) { alertUnfinished(); return; }
+
+            const keys = [
+                "Mi sang and danced for the elderly at a nursing home.",
+                "Mark and his friends collected books and set up a community library.",
+                "Lan and Mai grew and donated vegetables to a primary school.",
+                "Minh and his friends gave food to young patients in a hospital.",
+                "Tom made and sent postcards to the elderly at Christmas."
+            ];
+
+            const trans = [
+                "1. Mi đã hát và nhảy cho người già ở viện dưỡng lão.",
+                "2. Mark và các bạn của cậu ấy đã thu gom sách và thành lập một thư viện cộng đồng.",
+                "3. Lan và Mai đã trồng và quyên góp rau cho một trường tiểu học.",
+                "4. Minh và các bạn đã phát thức ăn cho các bệnh nhân nhí trong bệnh viện.",
+                "5. Tom đã làm và gửi bưu thiếp cho người già vào dịp Giáng sinh."
+            ];
+
+            let html = '<p class="font-bold mb-2">Đáp án chuẩn & Bản dịch chi tiết:</p>';
+            keys.forEach((k, idx) => {
+                html += `
+                    <div class="mb-2 p-2 bg-slate-50 border border-slate-200 rounded">
+                        <p class="font-semibold text-indigo-900">${idx+1}. ${k}</p>
+                        <p class="text-xs text-slate-600">👉 Nghĩa: ${trans[idx]}</p>
+                    </div>
+                `;
+            });
+
+            const fb = document.getElementById('lb-ex4-feedback');
+            fb.className = "mt-4 p-4 rounded-lg text-sm bg-indigo-50 border border-indigo-200";
+            fb.innerHTML = html;
+            fb.classList.remove('hidden');
+        }
+        function resetLBEx4() {
+            document.getElementById('lb-ex4-form').reset();
+            document.getElementById('lb-ex4-feedback').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
